@@ -2,7 +2,7 @@
   "apphosting": [
     {
       "backendId": "obesity-prediction",
-      "rootDir": "/Obesity_Prediction",
+      "rootDir": "/",
       "ignore": [
         "node_modules",
         ".git",
@@ -33,5 +33,19 @@
         "functions"
       ]
     }
-  ]
+  ],
+  "hosting": {
+    "public": "Obesity_Prediction",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }
